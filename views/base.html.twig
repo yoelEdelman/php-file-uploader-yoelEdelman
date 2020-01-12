@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <title>Acceuil</title>
+    </head>
+    <body>
+        <main class="container">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1 class="display-4">Upload d'images</h1>
+                </div>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Voir la list</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="create">Ajouter une image</a>
+                    </li>
+                </ul>
+            </div>
+            {{ include('alerts/errors.html.twig') }}
+            {{ include('alerts/success.html.twig') }}
+            {% block content %}{% endblock %}
+        </main>
+    </body>
+</html>

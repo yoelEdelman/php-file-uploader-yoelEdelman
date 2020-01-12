@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    {% if images|length > 0 %}
+        {% for image in images %}
+            <div class="card mb-3">
+                <img src="/storage/{{ image }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ image }}</h5>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        Aucune image !
+    {% endif %}
+{% endblock %}
